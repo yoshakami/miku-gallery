@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 23%);
+    gap: 2%;
+    width: 95%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;   /* Full viewport width */
+    height: 100%;  /* Full viewport height */
+    overflow: hidden; /* Hide overflow by default */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+}
+
+.modal-content {
+    display: flex;  /* Flexbox for image fitting */
+    align-items: center;     /* Center image vertically */
+    position: relative; /* For image positioning */
+    width: 100%; /* Allow content to fit within viewport */
+    height: 100%; /* Allow content to fit within viewport */
+    flex-direction: column;
+    overflow: auto;
+}
+
+.modal-content img {
+    display: block; /* Remove default inline display */
+    cursor: pointer; /* Clickable image */
+    transition: transform 0.25s ease; /* Smooth transition for zoom */
+    height: 44rem;
+}
+
+
+/* Le texte de description/caption */
+#caption {
+    margin: auto;
+    display: block;
+    max-height: 5%;
+    max-width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
